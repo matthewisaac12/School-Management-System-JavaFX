@@ -1,6 +1,10 @@
 package com.example.matthewsms.dao;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DBConnect {
     public static void main(String[] args) {
@@ -8,10 +12,17 @@ public class DBConnect {
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/matthew_school_management", "root", "");
             System.out.println("Connection successful");
 
-            String sql = "INSERT INTO subject VALUES (NULL, 'English', 'ENG', 'Basic ENG', now(), null), (NULL, 'Science', 'SCI', 'Basic Science', now(), null)";
+            String sql = "SELECT * FROM subject";
             Statement statement = connection.createStatement();
-            int rows = statement.executeUpdate(sql);
-            System.out.println(rows);
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            while(resultSet.next()) {
+            System.out.println(resultSet.getString("subject_name"));
+            System.out.println(resultSet.getString("subject_code"));
+            System.out.println(resultSet.getString("description"));
+
+            System.out.println("-----------------------------");
+            }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
