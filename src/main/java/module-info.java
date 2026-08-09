@@ -5,5 +5,6 @@ module com.example.matthewsms {
 
 
     opens com.example.matthewsms to javafx.fxml;
+    opens com.example.matthewsms.controller;
     exports com.example.matthewsms;
 }
