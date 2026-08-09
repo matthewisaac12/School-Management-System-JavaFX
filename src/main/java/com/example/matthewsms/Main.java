@@ -1,13 +1,12 @@
 package com.example.matthewsms;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class Main extends Application {
     @Override
@@ -22,5 +21,7 @@ public class Main extends Application {
 
     public static void main(String[] args) throws SQLException {
         launch();
+
+        //DBConnect.connect();
     }
 }
