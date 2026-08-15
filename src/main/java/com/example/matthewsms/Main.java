@@ -3,6 +3,7 @@ package com.example.matthewsms;
 import java.io.IOException;
 import java.sql.SQLException;
 
+import com.example.matthewsms.dao.DBConnect;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
