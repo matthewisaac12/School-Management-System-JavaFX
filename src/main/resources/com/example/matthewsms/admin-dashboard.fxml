@@ -13,6 +13,23 @@
 
     <children>
         <BorderPane prefHeight="600.0" prefWidth="900.0">
+            <left>
+                <VBox styleClass="nav" spacing="8.0" prefWidth="200.0">
+                    <children>
+                        <Label text="Navigation" styleClass="nav-title" />
+                        <Button text="Dashboard" styleClass="nav-button" fx:id="btnDashboard" />
+                        <Button text="Students" styleClass="nav-button" fx:id="btnStudents" />
+                        <Button text="Teachers" styleClass="nav-button" fx:id="btnTeachers" />
+                        <Button text="Parents" styleClass="nav-button" fx:id="btnParents" />
+                        <Button text="Classes" styleClass="nav-button" fx:id="btnClasses" />
+                        <Button text="Subjects" styleClass="nav-button" fx:id="btnSubjects" />
+                        <Button text="Academics" styleClass="nav-button" fx:id="btnAcademics" />
+                        <Button text="Exams" styleClass="nav-button" fx:id="btnExams" />
+                        <Button text="Reports" styleClass="nav-button" fx:id="btnReports" />
+                        <Pane VBox.vgrow="ALWAYS" />
+                    </children>
+                </VBox>
+            </left>
             <top>
                 <HBox fx:id="topBar" styleClass="top-bar" spacing="12.0" alignment="CENTER_LEFT">
                     <children>

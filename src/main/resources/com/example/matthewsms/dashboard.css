@@ -55,6 +55,40 @@ AnchorPane {
     -fx-text-fill: #6b7280;
 }
 
+/* Navigation styles */
+.nav {
+    -fx-padding: 18 12 18 12;
+    -fx-background-color: linear-gradient(to bottom, #ffffffcc, #f7fbffcc);
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: #e6e9ef;
+}
+
+.nav-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #374151;
+    -fx-font-weight: 700;
+    -fx-padding: 6 0 8 0;
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0b3b66;
+    -fx-font-size: 13px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-pref-height: 36px;
+    -fx-padding: 0 8 0 8;
+}
+
+.nav-button:hover {
+    -fx-background-color: #f0f6ff;
+    -fx-background-radius: 6;
+}
+
+.nav-button:focused {
+    -fx-border-color: transparent;
+    -fx-background-color: #e8f0ff;
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 700px) {
     .stat-card { -fx-min-height: 72px; }
