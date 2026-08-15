@@ -8,7 +8,82 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
+            prefHeight="600.0" prefWidth="900.0"
+            stylesheets="@dashboard.css">
 
-            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="900.0">
+            <top>
+                <HBox fx:id="topBar" styleClass="top-bar" spacing="12.0" alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Admin Dashboard" styleClass="app-title" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Label text="Welcome, Admin" styleClass="user-greeting" />
+                    </children>
+                </HBox>
+            </top>
+            <center>
+                <VBox spacing="20.0" styleClass="content" alignment="TOP_LEFT">
+                    <children>
+                        <Label text="Quick Statistics" styleClass="section-title" />
+
+                        <GridPane hgap="18.0" vgap="18.0">
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="25.0" />
+                                <ColumnConstraints percentWidth="25.0" />
+                                <ColumnConstraints percentWidth="25.0" />
+                                <ColumnConstraints percentWidth="25.0" />
+                            </columnConstraints>
+
+                            <children>
+                                <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER">
+                                    <children>
+                                        <Label text="1,234" styleClass="stat-value" />
+                                        <Label text="Students" styleClass="stat-label" />
+                                    </children>
+                                </VBox>
+
+                                <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER">
+                                    <children>
+                                        <Label text="84" styleClass="stat-value" />
+                                        <Label text="Teachers" styleClass="stat-label" />
+                                    </children>
+                                </VBox>
+
+                                <VBox styleClass="stat-card" GridPane.columnIndex="2" GridPane.rowIndex="0" alignment="CENTER">
+                                    <children>
+                                        <Label text="2,018" styleClass="stat-value" />
+                                        <Label text="Parents" styleClass="stat-label" />
+                                    </children>
+                                </VBox>
+
+                                <VBox styleClass="stat-card" GridPane.columnIndex="3" GridPane.rowIndex="0" alignment="CENTER">
+                                    <children>
+                                        <Label text="48" styleClass="stat-value" />
+                                        <Label text="Classes" styleClass="stat-label" />
+                                    </children>
+                                </VBox>
+
+                                <VBox styleClass="stat-card" GridPane.columnIndex="0" GridPane.rowIndex="1" alignment="CENTER">
+                                    <children>
+                                        <Label text="12" styleClass="stat-value" />
+                                        <Label text="Subjects" styleClass="stat-label" />
+                                    </children>
+                                </VBox>
+
+                                <VBox styleClass="stat-card" GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER">
+                                    <children>
+                                        <Label text="3,456" styleClass="stat-value" />
+                                        <Label text="Enrollments" styleClass="stat-label" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </GridPane>
+
+                    </children>
+                </VBox>
+            </center>
+        </BorderPane>
+    </children>
 
 </AnchorPane>
